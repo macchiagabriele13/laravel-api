@@ -40,7 +40,9 @@
                         <td scope="row">{{$project->id}}</td>
                         <td>{{$project->title}}</td>
                         <td>{{$project->slug}}</td>
-                        <td>{{$project->cover_image}}</td>
+                        <td>
+                            <img width="100" height="100" src="{{asset('storage/' . $project->cover_image )}}" alt="">
+                        </td>
                         <td>{{$project->difficulty}}</td>
                         <td>{{$project->languages}}</td>
                         <td>{{ $project->type ? $project->type->name : 'Without Type'}}</td>
